@@ -26,18 +26,14 @@ public class ShipMovement : MonoBehaviour
         }
         else
         {
-            maxVelocity = 25f;
-            velocityMult = 20f;
+            maxVelocity = 50f;
+            velocityMult = 40f;
         }
         if (rb.velocity.magnitude > maxVelocity)
         {
             rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxVelocity);
         }
-
-
-
     }
-
 
     private void ThrustForward(float amount)
     {
@@ -55,6 +51,11 @@ public class ShipMovement : MonoBehaviour
         float yAxis = Input.GetAxis("Vertical");
         float xAxis = Input.GetAxis("Horizontal");
         ThrustForward(yAxis * velocityMult);
-        Rotate(transform, -xAxis * rotationSpeed);
+        if (xAxis != 0)
+        {
+            Rotate(transform, -xAxis * rotationSpeed);
+        }
+       // else
+            rb.angularVelocity *= .95f;
     }
 }

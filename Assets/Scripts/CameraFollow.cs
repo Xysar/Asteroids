@@ -6,10 +6,12 @@ public class CameraFollow : MonoBehaviour
 {
     public Transform target;
     public Vector3 offset;
-
     // Update is called once per frame
     void Update()
     {
-        transform.position = target.position + offset;
+        if (target == null)
+        {
+            target = GameObject.Find("SpaceShip").transform;
+        }else transform.position = target.position + offset;
     }
 }
