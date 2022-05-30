@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 5708510605777793400}
   - component: {fileID: 1842068049383159450}
   - component: {fileID: 2091774461563748259}
-  - component: {fileID: 6381532134718000263}
   - component: {fileID: 5052039610960984793}
+  - component: {fileID: 1508825285053928840}
   m_Layer: 7
   m_Name: EnemyBullet
   m_TagString: Untagged
@@ -110,19 +110,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.3890052, y: 1.650075}
   m_EdgeRadius: 0
---- !u!114 &6381532134718000263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3455192564321253413}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2556e2376efbf44aa1fb1cdc0d6f6d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 1
 --- !u!114 &5052039610960984793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,6 +124,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   turnRate: 30
+--- !u!114 &1508825285053928840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3455192564321253413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 362066d0d97e2b94291313d3afd64fb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 1
 --- !u!1 &5401119937032511405
 GameObject:
   m_ObjectHideFlags: 0

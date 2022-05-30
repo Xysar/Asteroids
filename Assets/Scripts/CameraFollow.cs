@@ -12,6 +12,33 @@ public class CameraFollow : MonoBehaviour
         if (target == null)
         {
             target = GameObject.Find("SpaceShip").transform;
-        }else transform.position = target.position + offset;
+        }
+        else
+        {
+            transform.position = target.position + offset;
+            boundCamera();
+        }
+    }
+
+    void boundCamera()
+    {
+        Vector3 newPosition = transform.position;
+        if (target.position.x < -360)
+        {
+            newPosition.x = -360;
+        }
+        if(target.position.x > 360)
+        {
+            newPosition.x = 360;
+        }
+        if(target.position.y < -260)
+        {
+            newPosition.y = -260;
+        }
+        if(target.position.y > 260)
+        {
+            newPosition.y = 260;
+        }
+        transform.position = newPosition;
     }
 }
